@@ -39,7 +39,6 @@ const initiatePayment = () => {
 
         session.onpaymentauthorized = async (event) => {
             const payment = event.payment; // The payment details received from Apple Pay
-            const paymentToken = payment.token.paymentData; // Retrieve the payment token
 
             // Send the payment details to the backend server
             try {
